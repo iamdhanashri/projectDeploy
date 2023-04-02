@@ -6,7 +6,7 @@ const redisClient = redis.createClient({
    password: "Oh1WqmxwXR8QDotwAn8xvbDqNykmKJma",
    socket: {
        host: "redis-18021.c212.ap-south-1-1.ec2.cloud.redislabs.com",
-       port: "18021"
+       port: 18021
    }
 });
 
@@ -22,32 +22,6 @@ const redisClient = redis.createClient({
  });
 
  redisClient.connect();
-
-// const redisClient = redis.createClient({
-//     password: "Oh1WqmxwXR8QDotwAn8xvbDqNykmKJma",
-//    socket: {
-//        host: "redis-18021.c212.ap-south-1-1.ec2.cloud.redislabs.com",
-//        port: 18021
-//    }
-//  });
- 
-//  redisClient.on('connect', () => {
-//    console.log('Connected to Redis');
-//  });
- 
-//  redisClient.on('error', (err) => {
-//    console.error('Redis error:', err);
-//  });
- 
-//  (async () => {
-//    try {
-//      await redisClient.connect();
-//    } catch (err) {
-//      console.error('Redis connection error:', err);
-//    }
-//  })();
-
-//  redisClient.connect();
 
  module.exports={
     redisClient
